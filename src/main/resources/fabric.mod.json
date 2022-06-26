@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "project16",
+  "version": "${version}",
+
+  "name": "Project 16",
+  "description": "",
+  "authors": [
+    "Pixfumy"
+  ],
+  "license": "MIT",
+  "icon": "assets/project16/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.pixfumy.project16.ExampleMod"
+    ]
+  },
+  "mixins": [
+    "project16.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.2",
+    "minecraft": "1.16.1",
+    "java": ">=17"
+  }
+}
