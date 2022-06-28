@@ -6,7 +6,8 @@
   "name": "Project 16",
   "description": "",
   "authors": [
-    "pixfumy"
+    "pixfumy",
+    "gregor0410"
   ],
   "license": "MIT",
   "icon": "assets/project16/icon.png",
@@ -21,7 +22,7 @@
     "project16.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.8",
+    "fabricloader": ">=0.13.0",
     "minecraft": "1.16.5",
     "java": ">=17"
   }

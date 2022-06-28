@@ -4,9 +4,10 @@
   "package": "me.pixfumy.project16.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "DefaultBiomeFeaturesMixin",
+    "access.ConfiguredStructureFeaturesAccess"
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1
