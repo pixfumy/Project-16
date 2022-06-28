@@ -20,11 +20,9 @@
   "mixins": [
     "project16.mixins.json"
   ],
-  "accessWidener" : "project16.accesswidener",
   "depends": {
-    "fabricloader": ">=0.12.12",
-    "fabric": "*",
-    "minecraft": "1.16.1",
+    "fabricloader": ">=0.14.8",
+    "minecraft": "1.16.5",
     "java": ">=17"
   }
 }

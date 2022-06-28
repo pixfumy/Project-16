@@ -19,7 +19,7 @@ public class Project16 implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LogManager.getLogger("Project 16");
 	public static final StructureFeature<StructurePoolFeatureConfig> FEATURE = StructureFeature.register(
-			"project16:tower",
+			"project16:tower_feature",
 			new TowerFeature(StructurePoolFeatureConfig.CODEC),
 			GenerationStep.Feature.SURFACE_STRUCTURES
 	);
