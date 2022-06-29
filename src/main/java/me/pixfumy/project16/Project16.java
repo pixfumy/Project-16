@@ -1,6 +1,6 @@
 package me.pixfumy.project16;
 
-import me.pixfumy.structure.Structures;
+import me.pixfumy.project16.structure.Structures;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
 import net.minecraft.util.Identifier;
@@ -21,8 +21,13 @@ public class Project16 implements ModInitializer {
 	public void onInitialize() {
 		FabricStructureBuilder.create(new Identifier(modid, "tower"), Structures.TOWER)
 				.step(GenerationStep.Feature.SURFACE_STRUCTURES)
-				.defaultConfig(1, 0, 0)
+				.defaultConfig(32, 8, 86421)
 				.adjustsSurface()
 				.register();
+		FabricStructureBuilder.create(new Identifier(modid, "pride"), Structures.PRIDE)
+				.step(GenerationStep.Feature.SURFACE_STRUCTURES)
+				.defaultConfig(16, 8, 561349)
+				.register();
+
 	}
 }

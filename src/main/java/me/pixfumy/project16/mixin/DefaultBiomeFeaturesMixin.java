@@ -1,6 +1,6 @@
 package me.pixfumy.project16.mixin;
 
-import me.pixfumy.structure.ConfiguredStructures;
+import me.pixfumy.project16.structure.ConfiguredStructures;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,5 +14,6 @@ public class DefaultBiomeFeaturesMixin {
     private static void addStructures(GenerationSettings.Builder builder, CallbackInfo ci){
         ConfiguredStructures.init();
         builder.structureFeature(ConfiguredStructures.TOWER);
+        builder.structureFeature(ConfiguredStructures.PRIDE);
     }
 }
