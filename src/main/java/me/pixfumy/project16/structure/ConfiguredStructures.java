@@ -2,6 +2,7 @@ package me.pixfumy.project16.structure;
 
 import me.pixfumy.project16.Project16;
 import me.pixfumy.project16.mixin.access.ConfiguredStructureFeaturesAccess;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
