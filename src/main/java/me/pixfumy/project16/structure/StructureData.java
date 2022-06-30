@@ -20,7 +20,7 @@ public class StructureData {
                 new StructurePool(
                         new Identifier(modid,"tower/start"),
                         new Identifier("empty"),
-                        ImmutableList.of(Pair.of(StructurePoolElement.method_30434("project16:tower/tower"),1)),
+                        ImmutableList.of(Pair.of(StructurePoolElement.method_30434("project16:tower/zen_tower"),1)),
                         StructurePool.Projection.RIGID
                 )
         );

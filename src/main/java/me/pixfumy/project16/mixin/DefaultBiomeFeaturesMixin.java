@@ -13,7 +13,12 @@ public class DefaultBiomeFeaturesMixin {
     @Inject(method="addDefaultUndergroundStructures",at=@At("TAIL"))
     private static void addStructures(GenerationSettings.Builder builder, CallbackInfo ci){
         ConfiguredStructures.init();
-        builder.structureFeature(ConfiguredStructures.TOWER);
         builder.structureFeature(ConfiguredStructures.PRIDE);
+    }
+
+    @Inject(method="addOceanStructures",at=@At("TAIL"))
+    private static void addStructures3(GenerationSettings.Builder builder, CallbackInfo ci){
+        ConfiguredStructures.init();
+        builder.structureFeature(ConfiguredStructures.TOWER);
     }
 }

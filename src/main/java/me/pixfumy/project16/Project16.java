@@ -22,7 +22,6 @@ public class Project16 implements ModInitializer {
 		FabricStructureBuilder.create(new Identifier(modid, "tower"), Structures.TOWER)
 				.step(GenerationStep.Feature.SURFACE_STRUCTURES)
 				.defaultConfig(32, 8, 86421)
-				.adjustsSurface()
 				.register();
 		FabricStructureBuilder.create(new Identifier(modid, "pride"), Structures.PRIDE)
 				.step(GenerationStep.Feature.SURFACE_STRUCTURES)
