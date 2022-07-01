@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,6 +20,7 @@ public class Project16 implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		StructurePoolFeatureConfig.CODEC.listOf();
 		FabricStructureBuilder.create(new Identifier(modid, "tower"), Structures.TOWER)
 				.step(GenerationStep.Feature.SURFACE_STRUCTURES)
 				.defaultConfig(32, 8, 86421)

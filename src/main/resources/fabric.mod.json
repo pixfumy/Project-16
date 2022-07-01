@@ -22,6 +22,7 @@
   "mixins": [
     "project16.mixins.json"
   ],
+  "accessWidener": "project16.accesswidener",
   "depends": {
     "fabricloader": ">=0.13.0",
     "minecraft": "1.16.5",

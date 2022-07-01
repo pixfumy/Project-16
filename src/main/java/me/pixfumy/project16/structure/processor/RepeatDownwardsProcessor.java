@@ -21,6 +21,7 @@ import java.util.List;
 
 public class RepeatDownwardsProcessor extends StructureProcessor {
     //repeats a piece downwards until it hits solid terrain - works the same as vanilla fortress pillar generation.
+    //TODO: change this to use data structure blocks  (usage something like repeatdown <structure identifier or structure pool>)
     public static final Codec<RepeatDownwardsProcessor> CODEC = RecordCodecBuilder.create((instance-> instance.group(Identifier.CODEC.fieldOf("structure").forGetter((repeatDownwardsProcessor -> repeatDownwardsProcessor.structureId))).apply(instance,RepeatDownwardsProcessor::new)));
     public static final StructureProcessorType<RepeatDownwardsProcessor> TYPE = Registry.register(Registry.STRUCTURE_PROCESSOR,"project16:repeat_downwards",()->CODEC);
     public final Identifier structureId;
