@@ -22,6 +22,8 @@ import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
 import org.lwjgl.system.CallbackI;
 import org.spongepowered.asm.mixin.Shadow;
 
+import java.util.Random;
+
 public class TowerFeature extends JigsawFeature {
     private final int structureStartY_;
     private final boolean field_25836_;
@@ -49,19 +51,27 @@ public class TowerFeature extends JigsawFeature {
 
         @Override
         public void init(DynamicRegistryManager dynamicRegistryManager, ChunkGenerator chunkGenerator, StructureManager structureManager, int i, int j, Biome biome, StructurePoolFeatureConfig structurePoolFeatureConfig) {
-            BlockPos blockPos = new BlockPos(i * 16, 0, j * 16);
             StructurePools.initDefaultPools();
             int k = (i << 4) + 7;
             int l = (j << 4) + 7;
-            int m;
+            int m = 0;
+            int h1, h2, h3, h4;
+            Heightmap.Type heightMap;
             if (biome.getCategory() == Biome.Category.OCEAN) {
-                m = chunkGenerator.getHeightInGround(k, l, Heightmap.Type.OCEAN_FLOOR_WG);
+                heightMap = Heightmap.Type.OCEAN_FLOOR_WG;
             } else if (biome.getCategory() == Biome.Category.DESERT) {
-                m = chunkGenerator.getHeightInGround(k, l, Heightmap.Type.WORLD_SURFACE_WG);
+                heightMap = Heightmap.Type.WORLD_SURFACE_WG;
+                h1 = chunkGenerator.getHeightInGround(k + 5, l + 5, heightMap);
+                h2 = chunkGenerator.getHeightInGround(k - 5, l + 5, heightMap);
+                h3 = chunkGenerator.getHeightInGround(k + 5, l - 5, heightMap);
+                h4 = chunkGenerator.getHeightInGround(k - 5, l - 5, heightMap);
+                m = Math.min(Math.min(Math.min(h1, h2), Math.min(h3, h4)), m);
+                m -= this.random.nextInt(2);
             } else {
                 return;
             }
-            blockPos = new BlockPos(i * 16 + 8, m, j * 16 + 8);
+            m += chunkGenerator.getHeightInGround(k, l, heightMap);
+            BlockPos blockPos = new BlockPos(k, m, l);
             StructurePoolBasedGenerator.method_30419(dynamicRegistryManager, structurePoolFeatureConfig, PoolStructurePiece::new, chunkGenerator, structureManager, blockPos, this.children, this.random, this.towerFeature.field_25836_, this.towerFeature.surface_);
             this.setBoundingBoxFromChildren();
         }
