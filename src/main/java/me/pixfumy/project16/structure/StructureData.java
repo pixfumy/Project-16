@@ -3,6 +3,7 @@ package me.pixfumy.project16.structure;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import me.pixfumy.project16.structure.processor.RepeatDownwardsProcessor;
+import net.minecraft.structure.pool.SinglePoolElement;
 import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
@@ -14,6 +15,8 @@ import static me.pixfumy.project16.Project16.modid;
 public class StructureData {
     public static final StructurePool TOWER_START_POOL;
     public static final StructurePool PRIDE_START_POOL;
+
+    public static final SinglePoolElement GAY_BRIDGE_ELEMENT = StructurePoolElement.method_30434("project16:pride/gay_bridge").apply(StructurePool.Projection.RIGID);
 
     static{
         TOWER_START_POOL = StructurePools.register(
@@ -28,16 +31,14 @@ public class StructureData {
                 new StructurePool(
                         new Identifier(modid,"pride/start"),
                         new Identifier("empty"),
-                        ImmutableList.of(Pair.of(StructurePoolElement.method_30434("project16:pride/gay_bridge"),1)),
-                        StructurePool.Projection.RIGID
+                        ImmutableList.of(Pair.of(GAY_BRIDGE_ELEMENT,1))
                 )
         );
         StructurePools.register(
                 new StructurePool(
                         new Identifier(modid,"pride/bridge"),
                         new Identifier("empty"),
-                        ImmutableList.of(Pair.of(StructurePoolElement.method_30434("project16:pride/gay_bridge"),1)),
-                        StructurePool.Projection.RIGID
+                        ImmutableList.of(Pair.of(GAY_BRIDGE_ELEMENT,1))
                 )
         );
         StructurePools.register(

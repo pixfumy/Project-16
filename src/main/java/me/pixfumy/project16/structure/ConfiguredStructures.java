@@ -1,11 +1,15 @@
 package me.pixfumy.project16.structure;
 
+
+import com.mojang.datafixers.util.Pair;
 import me.pixfumy.project16.Project16;
 import me.pixfumy.project16.mixin.access.ConfiguredStructureFeaturesAccess;
-import net.minecraft.world.Heightmap;
+import me.pixfumy.project16.mixinterface.IStructurePoolFeatureConfig;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
+
+import java.util.List;
 
 public class ConfiguredStructures {
     public static final ConfiguredStructureFeature<StructurePoolFeatureConfig,? extends StructureFeature<StructurePoolFeatureConfig>> TOWER;
@@ -22,7 +26,8 @@ public class ConfiguredStructures {
         PRIDE = ConfiguredStructureFeaturesAccess.invokeRegister(
                 Project16.modid+":pride",
                 Structures.PRIDE.configure(
-                        new StructurePoolFeatureConfig(()->StructureData.PRIDE_START_POOL,5)
+                        ((IStructurePoolFeatureConfig)new StructurePoolFeatureConfig(()->StructureData.PRIDE_START_POOL,5))
+                                .setLimitedStructurePoolElements(List.of(new Pair<>(List.of(StructureData.GAY_BRIDGE_ELEMENT),3)))
                 )
         );
     }
