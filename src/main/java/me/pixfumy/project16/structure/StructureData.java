@@ -15,6 +15,8 @@ import static me.pixfumy.project16.Project16.modid;
 public class StructureData {
     public static final StructurePool TOWER_START_POOL;
     public static final StructurePool PRIDE_START_POOL;
+    public static final StructurePool CRIMSON_NETHER_SHIP_START_POOL;
+    public static final StructurePool WARPED_NETHER_SHIP_START_POOL;
 
     public static final SinglePoolElement GAY_BRIDGE_ELEMENT = StructurePoolElement.method_30434("project16:pride/gay_bridge").apply(StructurePool.Projection.RIGID);
 
@@ -27,6 +29,22 @@ public class StructureData {
                                 Pair.of(StructurePoolElement.method_30434("project16:tower/one_block_tower"),1),
                                 Pair.of(StructurePoolElement.method_30434("project16:tower/sword_tower"),1),
                                 Pair.of(StructurePoolElement.method_30434("project16:tower/chaos_tower"),1)),
+                        StructurePool.Projection.RIGID
+                )
+        );
+        CRIMSON_NETHER_SHIP_START_POOL = StructurePools.register(
+                new StructurePool(
+                        new Identifier(modid,"crimson_nether_ship/start"),
+                        new Identifier("empty"),
+                        ImmutableList.of(Pair.of(StructurePoolElement.method_30434("project16:nether_ship/crimson_nether_ship"),1)),
+                        StructurePool.Projection.RIGID
+                        )
+        );
+        WARPED_NETHER_SHIP_START_POOL = StructurePools.register(
+                new StructurePool(
+                        new Identifier(modid,"warped_nether_ship/start"),
+                        new Identifier("empty"),
+                        ImmutableList.of(Pair.of(StructurePoolElement.method_30434("project16:nether_ship/warped_nether_ship"),1)),
                         StructurePool.Projection.RIGID
                 )
         );

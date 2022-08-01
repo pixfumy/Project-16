@@ -29,6 +29,9 @@ public class Project16 implements ModInitializer {
 				.step(GenerationStep.Feature.SURFACE_STRUCTURES)
 				.defaultConfig(16, 8, 561349)
 				.register();
-
+		FabricStructureBuilder.create(new Identifier(modid, "nether_ship"), Structures.NETHER_SHIP)
+				.step(GenerationStep.Feature.UNDERGROUND_STRUCTURES)
+				.defaultConfig(16, 8, 34535636)
+				.register();
 	}
 }

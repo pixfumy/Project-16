@@ -8,7 +8,6 @@ import net.minecraft.structure.pool.StructurePoolBasedGenerator;
 import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.registry.DynamicRegistryManager;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;
