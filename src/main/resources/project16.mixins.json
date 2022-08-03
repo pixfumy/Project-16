@@ -10,6 +10,7 @@
     "StructurePoolBasedGeneratorMixin",
     "StructurePoolFeatureConfigMixin",
     "StructurePoolGeneratorMixin",
+    "BastionRemnantGeneratorMixin",
     "access.ConfiguredStructureFeaturesAccess",
     "access.PoolStructurePieceAccess",
     "access.SinglePoolElementAccess",
