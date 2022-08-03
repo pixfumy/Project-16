@@ -8,6 +8,7 @@ import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.structure.processor.StructureProcessorList;
+import net.minecraft.structure.processor.StructureProcessorLists;
 import net.minecraft.util.Identifier;
 
 import static me.pixfumy.project16.Project16.modid;
@@ -73,5 +74,13 @@ public class StructureData {
                         StructurePool.Projection.RIGID
                 )
         );
+        StructurePools.register(
+                new StructurePool(
+                        new Identifier("project16:bastion/spire/towers_upper"),
+                        new Identifier("empty"),
+                        ImmutableList.of(
+                                Pair.of(StructurePoolElement.method_30435("project16:bastion/spire/towers_upper/spire_towers_upper", StructureProcessorLists.BASTION_GENERIC_DEGRADATION), 1)
+                        ),
+                        StructurePool.Projection.RIGID));
     }
 }

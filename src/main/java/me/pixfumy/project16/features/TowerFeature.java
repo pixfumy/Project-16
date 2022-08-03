@@ -18,18 +18,12 @@ import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.JigsawFeature;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
-import org.lwjgl.system.CallbackI;
-import org.spongepowered.asm.mixin.Shadow;
-
-import java.util.Random;
 
 public class TowerFeature extends JigsawFeature {
-    private final int structureStartY_;
     private final boolean field_25836_;
     private final boolean surface_;
     public TowerFeature(Codec<StructurePoolFeatureConfig> codec, int structureStartY, boolean bl, boolean surface) {
         super(codec, structureStartY, bl, surface);
-        this.structureStartY_ = structureStartY;
         this.field_25836_ = bl;
         this.surface_ = surface;
     }
@@ -45,7 +39,7 @@ public class TowerFeature extends JigsawFeature {
 
         public Start(TowerFeature feature, int chunkX, int chunkZ, BlockBox boundingBox, int references, long seed) {
             super(feature, chunkX, chunkZ, boundingBox, references, seed);
-            this.towerFeature = (TowerFeature) feature;
+            this.towerFeature = feature;
         }
 
         @Override

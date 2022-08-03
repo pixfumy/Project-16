@@ -1,6 +1,7 @@
 package me.pixfumy.project16.structure;
 
 import me.pixfumy.project16.features.TowerFeature;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.world.gen.feature.JigsawFeature;
 import net.minecraft.world.gen.feature.StructureFeature;
 import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
