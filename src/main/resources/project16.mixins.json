@@ -11,6 +11,7 @@
     "structure.StructurePoolFeatureConfigMixin",
     "structure.StructurePoolGeneratorMixin",
     "structure.BastionRemnantGeneratorMixin",
+    "mob.PigEntityRendererMixin",
     "mob.WitherSkeletonEntityMixin",
     "mob.PigEntityMixin",
     "mob.PiglinEntityMixin",

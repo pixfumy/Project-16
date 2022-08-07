@@ -22,8 +22,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static me.pixfumy.project16.Project16.modid;
-
 @Mixin(BastionRemnantGenerator.class)
 public class BastionRemnantGeneratorMixin {
     @Redirect(method = "<clinit>", at = @At(value = "INVOKE", target = "Lnet/minecraft/structure/pool/StructurePools;register(Lnet/minecraft/structure/pool/StructurePool;)Lnet/minecraft/structure/pool/StructurePool;"))

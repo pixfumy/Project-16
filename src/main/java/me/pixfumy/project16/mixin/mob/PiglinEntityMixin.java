@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class PiglinEntityMixin {
     @Inject(method = "initEquipment", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/mob/PiglinEntity;equipAtChance(Lnet/minecraft/entity/EquipmentSlot;Lnet/minecraft/item/ItemStack;)V", shift = At.Shift.AFTER))
     private void giveCrown(CallbackInfo ci) {
-        if (((PiglinEntity)(Object)this).world.random.nextFloat() < 0.01f) {
+        if (((PiglinEntity)(Object)this).world.random.nextFloat() < 0.005f) {
             ((PiglinEntity) (Object) this).equipStack(EquipmentSlot.HEAD, new ItemStack(Project16.TECHNOBLADE_CROWN));
         }
     }

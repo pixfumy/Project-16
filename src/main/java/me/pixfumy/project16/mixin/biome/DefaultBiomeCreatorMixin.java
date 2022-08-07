@@ -1,7 +1,6 @@
 package me.pixfumy.project16.mixin.biome;
 
 import me.pixfumy.project16.structure.ConfiguredStructures;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.DefaultBiomeCreator;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
@@ -10,7 +9,6 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(DefaultBiomeCreator.class)
 public class DefaultBiomeCreatorMixin {
