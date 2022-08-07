@@ -1,4 +1,4 @@
-package me.pixfumy.project16.mixin;
+package me.pixfumy.project16.mixin.biome;
 
 import me.pixfumy.project16.structure.ConfiguredStructures;
 import net.minecraft.world.biome.Biome;

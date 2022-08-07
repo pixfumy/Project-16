@@ -1,4 +1,4 @@
-package me.pixfumy.project16.mixin;
+package me.pixfumy.project16.mixin.structure;
 
 import me.pixfumy.project16.mixinterface.IStructurePoolGenerator;
 import net.minecraft.structure.pool.StructurePoolBasedGenerator;

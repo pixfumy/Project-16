@@ -74,13 +74,5 @@ public class StructureData {
                         StructurePool.Projection.RIGID
                 )
         );
-        StructurePools.register(
-                new StructurePool(
-                        new Identifier("project16:bastion/spire/towers_upper"),
-                        new Identifier("empty"),
-                        ImmutableList.of(
-                                Pair.of(StructurePoolElement.method_30435("project16:bastion/spire/towers_upper/spire_towers_upper", StructureProcessorLists.BASTION_GENERIC_DEGRADATION), 1)
-                        ),
-                        StructurePool.Projection.RIGID));
     }
 }

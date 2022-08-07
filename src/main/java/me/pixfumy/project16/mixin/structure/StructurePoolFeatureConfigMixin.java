@@ -1,4 +1,4 @@
-package me.pixfumy.project16.mixin;
+package me.pixfumy.project16.mixin.structure;
 
 import com.mojang.datafixers.util.Pair;
 import com.mojang.serialization.Codec;
