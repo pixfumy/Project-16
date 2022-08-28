@@ -31,9 +31,9 @@ public abstract class TitleScreenMixin extends Screen {
 
     @Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screen/TitleScreen;method_29343(IILjava/util/function/BiConsumer;)V"))
     private void drawProject16Title(TitleScreen instance, int i, int j, BiConsumer biConsumer, MatrixStack matrices, int mouseX, int mouseY, float delta) {
-        this.method_29343(this.width/2 - 150, 30, (integer, integer2) -> {
-            this.drawTexture(matrices, integer, integer2, 0, 0, 175, 52);
-            this.drawTexture(matrices, integer + 175, integer2, 12, 53, 150, 52);
+        this.method_29343(this.width/2 - 120, 30, (integer, integer2) -> {
+            this.drawTexture(matrices, integer, integer2, 0, 0, 173, 55);
+            this.drawTexture(matrices, integer + 129, integer2 + 4, 13, 55, 150, 52);
         });
     }
 
